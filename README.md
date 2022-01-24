@@ -64,7 +64,7 @@
           System.out.println(ch);
       }
     }
-4、求和
+4、求和及平均数
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
         double sum = 0;
@@ -76,4 +76,24 @@
         }
         System.out.printf("%d个数的和为%f\n",m,sum);
         System.out.printf("%d个数的平均值为%f\n",m,sum/m);
+    }
+5、猪八戒娶媳妇
+    public static void main(String[] args) {
+        XiyoujiRenwu zhubajie,sunwukong;
+        zhubajie = new XiyoujiRenwu();
+        sunwukong = new XiyoujiRenwu();
+        zhubajie.height = 1.8f;
+        zhubajie.head = "大头";
+        zhubajie.ear = "一双大耳";
+        sunwukong.height = 1.62f;
+        sunwukong.weight = 1000f;
+        sunwukong.head = "秀发飘飘";
+        System.out.println("zhubajie的身高:"+zhubajie.height);
+        System.out.println("zhubajie的头:"+zhubajie.head);
+        System.out.println("sunwukong的重量:"+sunwukong.weight);
+        System.out.println("sunwukong的头:"+sunwukong.head);
+        zhubajie.speak("俺老猪要取媳妇");
+        System.out.println("zhubajie现在的头:"+zhubajie.head);
+        sunwukong.speak("老孙重1000斤，我想骗八戒背我");
+        System.out.println("sunwukong现在的头:"+sunwukong.head);
     }
