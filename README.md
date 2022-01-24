@@ -171,3 +171,31 @@ public class Circle {
         System.out.println("但不影响circular的bottom的引用");
         System.out.println("圆锥的bottom的引用："+circular.bottom);
     }
+8、手机号码
+public class SIM {
+    long number;
+    SIM(long number){
+        this.number = number;
+    }
+    long getNumber(){
+        return number;
+    }
+}
+public class MobileTelephone {
+    SIM sim;
+    void setSIM(SIM card){
+        sim = card;
+    }
+    long lookNumber(){
+        return sim.getNumber();
+    }
+}
+    public static void main(String[] args) {
+        SIM simOne = new SIM(13889776509L);
+        MobileTelephone mobile = new MobileTelephone();
+        mobile.setSIM(simOne);
+        System.out.println("手机号码:"+mobile.lookNumber());
+        SIM simTwo = new SIM(15967563567L);
+        mobile.setSIM(simTwo);
+        System.out.println("手机号码:"+mobile.lookNumber());
+    }
