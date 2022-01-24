@@ -12,7 +12,7 @@
         }
         System.out.println("sum="+sum);
     }
-2、遍历数组
+2、查找数组中的数字
     public static void main(String[] args) {
        int start = 0,end,middle;
        int a[] = {12,45,67,89,123,67,-45};
@@ -46,4 +46,21 @@
            System.out.printf("%d不在数组中.\n",number);
        else
            System.out.printf("%d在数组中.\n",number);
+    }
+3、遍历数组
+    public static void main(String[] args) {
+      int a[] = {1,2,3,4};
+      char b[] = {'a','b','c','d'};
+      for(int n = 0;n <a.length;n++){
+          System.out.println(a[n]);
+      }
+      for(int n = 0; n <b.length;n++){
+          System.out.println(b[n]);
+      }
+      for(int i : a){
+          System.out.println(i);
+      }
+      for(char ch: b){
+          System.out.println(ch);
+      }
     }
