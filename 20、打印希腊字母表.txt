@@ -1,0 +1,27 @@
+abstract class OutputAlphabet {
+    public abstract void output();
+}
+public class ShowBoard {
+    void showMess(OutputAlphabet show){
+        show.output();
+    }
+}
+public class OutputEnglish extends OutputAlphabet {
+    public void output(){
+        for(char c ='a';c<='z';c++){
+            System.out.printf("%3c",c);
+        }
+    }
+}
+    public static void main(String[] args) {
+        ShowBoard board = new ShowBoard();
+        board.showMess(new OutputEnglish());
+        System.out.println();
+        board.showMess(new OutputAlphabet()
+        {   public void output()
+        {    for(char c = '¦Á';c<='¦Ø';c++)
+               System.out.printf("%3c",c);
+        }
+    }
+        );
+    }

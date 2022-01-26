@@ -1,0 +1,36 @@
+public interface Advertisement {
+    public void showAdvertisement();
+    public String getCorpName();
+}
+public class AdvertisementBoard {
+    public void show(Advertisement adver){
+        System.out.println(adver.getCorpName()+"的广告词如下:");
+        adver.showAdvertisement();
+    }
+}
+public class BlackLandCorp implements Advertisement {
+
+     public void showAdvertisement(){
+         System.out.println("***************");
+         System.out.printf("劳动是爹\n土地是妈\n");
+         System.out.println("***************");
+     }
+     public String getCorpName(){
+         return "黑土集团";
+     }
+}
+public class WhiteCloudCorp implements Advertisement {
+    public void showAdvertisement(){
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@");
+        System.out.println("飞机中的战斗机，哎yes！/n");
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@");
+    }
+    public String getCorpName(){
+        return "白云有限公司" ;
+    }
+}
+    public static void main(String[] args) {
+        AdvertisementBoard board= new AdvertisementBoard();
+        board.show(new BlackLandCorp());
+        board.show(new WhiteCloudCorp());
+    }

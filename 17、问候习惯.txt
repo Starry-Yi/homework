@@ -1,0 +1,23 @@
+interface SpeakHello{
+    void speakHello();
+}
+class Chinese implements SpeakHello{
+    public void speakHello(){
+        System.out.println("中国人习惯问候语：你好，你吃饭了吗？");
+    }
+}
+class English implements SpeakHello{
+     public void speakHello(){
+        System.out.println("英国人习惯问候语：你好，天气不错");
+    }
+}
+class KindHello{
+    public void lookHello(SpeakHello hello){
+        hello.speakHello();
+    }
+}
+    public static void main(String[] args) {
+        KindHello kindHello = new KindHello();
+        kindHello.lookHello(new Chinese());
+        kindHello.lookHello(new English());
+    }
